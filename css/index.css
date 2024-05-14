@@ -1,0 +1,219 @@
+
+.nav-text{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    padding-right: 30px;
+}
+.nav {
+    vertical-align: top;
+    position: fixed;
+    width: 100%;
+    background-color: transparent;
+    background-size: cover;
+    z-index: 10;
+}
+.nav-item{
+    padding-left: 100px;
+
+}
+.nav-text{
+    display: inline;
+}
+a { 
+    color: black;
+    text-decoration: none;
+
+}
+.pinkblue{
+    padding: 0px;
+}
+.pink {
+    background-image: url(../images/Pink.png);
+    position: absolute;
+    animation-name: pinkelli;
+    animation-duration: 12s;
+    animation-iteration-count: infinite;
+}
+@keyframes pinkelli {
+    0%   {left: 0px; top:0px;}
+  25%  {left: 0px; top:150px;}
+  50%  {left:400px; top:150px;}
+  75%  {left:400px; top:0px;}
+  100% {left:0px; top:0px;}
+}
+.blue {
+    background-image: url(../images/Blue.png);
+    position: relative;
+    animation-name: blueelli;
+    animation-duration: 12s;
+    animation-iteration-count: infinite;
+}
+@keyframes blueelli{
+    0%   {left:0px; top:0px;}
+  25%  {left:400px; top:0px;}
+  50%  {left:400px; top:150px;}
+  75%  {left:0px; top:150px;}
+  100% {left:0px; top:0px;}
+}
+.about-me {
+    position: relative;
+    margin-left: 100px;
+    top: -400px;
+}
+
+.jockey-one-regular {
+    font-family: "Jockey One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+
+ }
+
+.heading{
+    font-family: "Jockey One",sans-serif ;
+    font-size: 128px;
+}  
+.text{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 24px;
+    text-decoration: none;
+    height: 266px;
+    width: 481px;
+}
+.heading2{
+    padding-left: 100px;
+    font-family: "Rasa",serif;
+    font-size: 40px;
+}
+.flex-container{
+    display:flex;
+    margin: 50px 100px 100px 50px;
+}
+
+.card-skill{
+    width: 33%;
+    padding: 30px;
+}
+
+h2{
+    font-family: "Rasa",serif;
+    font-size: 32px;
+    padding-top: 30px;
+}
+
+.card-text {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 24px;
+}
+
+button {
+    background-color: black;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border:none;
+  }
+.item1{
+    grid-area: image1 ;
+}
+.item2{
+    grid-area: main1;
+}
+.item3{
+    grid-area: image2 ;
+}
+.item4{
+    grid-area: main2;
+}
+.item5{
+    grid-area: image3 ;
+}
+.item6{
+    grid-area: main3;
+}
+.item7{
+    grid-area: main4;
+}
+@media only screen and (min-width: 900px) {
+    .grid-container{
+        padding: 30px 100px 0px 100px;
+        display: grid;
+        grid-template-rows: 500px 500px 500px;
+        grid-template-columns: 3fr 2fr;
+        grid-template-areas:
+        'image1 main1' 
+        'image2 main2'
+        'image3 main3'
+        'main4 main4';
+    }
+
+}
+.grid-container > .item7 {
+    text-align: center;
+}
+
+.grid-container > div {
+    padding: 30px 50px 30px 50px;
+}
+
+h3 {
+    font-family: "Rasa",serif;
+    font-size: 32px;
+}
+
+.footer{
+    width: 100%;
+    padding-top: 5%;
+    background-color: transparent;
+    background-size: cover;
+    z-index: 10;
+}
+.footer-item {
+    float: right;
+}
+.copy-right{
+    position: absolute;
+    justify-content: end;
+    padding-left: 20px;
+}
+
+
+@media only screen and (max-width: 600px) {
+   .flex-container{
+    width: 100%;
+    flex-direction: column;
+   } 
+   .card-skill{
+    width: 100%;
+   }
+   .grid-container{
+    width: 100%;
+    grid-template-rows: 400px 300px 400px 300px 400px 300px 300px;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+    'image1'
+    'main1'
+    'image2'
+    'main2'
+    'image3'
+    'main3'
+    'main4';
+   }
+   .grid-container > div {
+    text-align: center;
+   }
+   
+   .item2, .item4, .item6{
+    padding-top: 50px;
+    padding-bottom: 50px;
+   }
+   .copy-right{
+    position: relative;
+   }
+
+   img {
+    max-width: 100%;
+   }
+}
